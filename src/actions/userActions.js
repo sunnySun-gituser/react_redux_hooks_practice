@@ -1,6 +1,3 @@
-import { logoutUser } from './../../../../mern-plaid/client/src/actions/authActions';
-import React from 'react';
-
 const setUser = (userObj) => {
     return {
         type: "SET_USER",

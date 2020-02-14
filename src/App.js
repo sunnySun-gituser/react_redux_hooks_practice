@@ -1,24 +1,49 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import allActions from './actions';
 
+// useSelector: reducer
+// useDispatch: action
+// multiple reducers: useSelector
+// one reducer: const currentUser = state.user
 function App() {
-  return (
+  const counter = useSelector(state => state.counter)
+  const currentUser = useSelector(state => state.currentUser)
+
+  const dispatch = useDispatch()
+
+  const user = {name: "Sunny"}
+
+  // ,: to remember the useeffect does not run until the page is completely loaded
+  // useEffect will be called after the page load ended
+  // []: dependency: if user same, will not re-redender the component
+  useEffect(() => {
+    dispatch(allActions.userActions.setUser(user))
+  }, [])
+
+  console.log(currentUser)
+  return !currentUser 
+    ? <div><h1>Loading</h1></div>
+    :(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        currentUser.loggedIn
+        ?
+        <>
+          <h1>Hello, {currentUser.user.name}</h1>
+          <button onClick={() => dispatch(allActions.userActions.logOut())}>Logout</button>
+        </>
+        :
+        <>
+          <h1>Login</h1>
+          <button onClick={() => dispatch(allActions.userActions.setUser(user))}>Login as {user.name}</button>
+        </>
+      }
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => dispatch(allActions.counterActions.increment())}>Increment Counter</button>
+      <button onClick={() => dispatch(allActions.counterActions.decrement())}>Decrement Counter</button>
     </div>
   );
 }
