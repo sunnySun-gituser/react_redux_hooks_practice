@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_redux_hooks_practice/static/css/main.0151fde0.chunk.css",
+    "main.css": "/react_redux_hooks_practice/static/css/main.3fca9259.chunk.css",
     "main.js": "/react_redux_hooks_practice/static/js/main.5027723a.chunk.js",
     "main.js.map": "/react_redux_hooks_practice/static/js/main.5027723a.chunk.js.map",
     "runtime-main.js": "/react_redux_hooks_practice/static/js/runtime-main.9b6c1633.js",
@@ -8,15 +8,15 @@
     "static/js/2.12baf0fd.chunk.js": "/react_redux_hooks_practice/static/js/2.12baf0fd.chunk.js",
     "static/js/2.12baf0fd.chunk.js.map": "/react_redux_hooks_practice/static/js/2.12baf0fd.chunk.js.map",
     "index.html": "/react_redux_hooks_practice/index.html",
-    "precache-manifest.fc8c2827210920a198e0771320589f86.js": "/react_redux_hooks_practice/precache-manifest.fc8c2827210920a198e0771320589f86.js",
+    "precache-manifest.d4e6784984bd882054386f2193724552.js": "/react_redux_hooks_practice/precache-manifest.d4e6784984bd882054386f2193724552.js",
     "service-worker.js": "/react_redux_hooks_practice/service-worker.js",
-    "static/css/main.0151fde0.chunk.css.map": "/react_redux_hooks_practice/static/css/main.0151fde0.chunk.css.map",
+    "static/css/main.3fca9259.chunk.css.map": "/react_redux_hooks_practice/static/css/main.3fca9259.chunk.css.map",
     "static/js/2.12baf0fd.chunk.js.LICENSE.txt": "/react_redux_hooks_practice/static/js/2.12baf0fd.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9b6c1633.js",
     "static/js/2.12baf0fd.chunk.js",
-    "static/css/main.0151fde0.chunk.css",
+    "static/css/main.3fca9259.chunk.css",
     "static/js/main.5027723a.chunk.js"
   ]
 }
