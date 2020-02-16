@@ -33,17 +33,17 @@ function App() {
         ?
         <>
           <h1>Hello, {currentUser.user.name}</h1>
-          <button onClick={() => dispatch(allActions.userActions.logOut())}>Logout</button>
+          <button className='button' onClick={() => dispatch(allActions.userActions.logOut())}>Logout</button>
         </>
         :
         <>
           <h1>Login</h1>
-          <button onClick={() => dispatch(allActions.userActions.setUser(user))}>Login as {user.name}</button>
+          <button className='button' onClick={() => dispatch(allActions.userActions.setUser(user))}>Login as {user.name}</button>
         </>
       }
       <h1>Counter: {counter}</h1>
-      <button onClick={() => dispatch(allActions.counterActions.increment())}>Increment Counter</button>
-      <button onClick={() => dispatch(allActions.counterActions.decrement())}>Decrement Counter</button>
+      <button className='button' onClick={() => dispatch(allActions.counterActions.increment())}>Increment Counter</button>
+      <button className='button' onClick={() => dispatch(allActions.counterActions.decrement())}>Decrement Counter</button>
     </div>
   );
 }
